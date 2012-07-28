@@ -28,6 +28,7 @@
 		F3C19B4E15C39720005E8B62 /* Twitter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B4D15C39720005E8B62 /* Twitter.m */; };
 		F3C19B6415C44EDB005E8B62 /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B6315C44EDB005E8B62 /* Follower.m */; };
 		F3C19B6A15C45F36005E8B62 /* FollowersUserState.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B6915C45F36005E8B62 /* FollowersUserState.m */; };
+		F3C19B6D15C46FD9005E8B62 /* FollowerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B6C15C46FD9005E8B62 /* FollowerAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		F3C19B6315C44EDB005E8B62 /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
 		F3C19B6815C45F36005E8B62 /* FollowersUserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersUserState.h; sourceTree = "<group>"; };
 		F3C19B6915C45F36005E8B62 /* FollowersUserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersUserState.m; sourceTree = "<group>"; };
+		F3C19B6B15C46FD9005E8B62 /* FollowerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerAPI.h; sourceTree = "<group>"; };
+		F3C19B6C15C46FD9005E8B62 /* FollowerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,12 +203,22 @@
 		F3C19B6115C44CDB005E8B62 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				F35501BA15C0E7FE0078A356 /* Followers.xcdatamodeld */,
-				F3C19B6215C44EDB005E8B62 /* Follower.h */,
-				F3C19B6315C44EDB005E8B62 /* Follower.m */,
+				F3C19B6E15C4705A005E8B62 /* Follower */,
 			);
 			name = "Data Models";
 			path = Followers;
+			sourceTree = "<group>";
+		};
+		F3C19B6E15C4705A005E8B62 /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				F35501BA15C0E7FE0078A356 /* Followers.xcdatamodeld */,
+				F3C19B6215C44EDB005E8B62 /* Follower.h */,
+				F3C19B6315C44EDB005E8B62 /* Follower.m */,
+				F3C19B6B15C46FD9005E8B62 /* FollowerAPI.h */,
+				F3C19B6C15C46FD9005E8B62 /* FollowerAPI.m */,
+			);
+			name = Follower;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +301,7 @@
 				F3C19B4E15C39720005E8B62 /* Twitter.m in Sources */,
 				F3C19B6415C44EDB005E8B62 /* Follower.m in Sources */,
 				F3C19B6A15C45F36005E8B62 /* FollowersUserState.m in Sources */,
+				F3C19B6D15C46FD9005E8B62 /* FollowerAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

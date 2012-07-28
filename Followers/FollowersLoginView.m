@@ -19,6 +19,7 @@
   [appDelegate.twitterAccountStore requestAccessToAccountsWithType:twitterAccountType options:nil completion:^(BOOL granted, NSError *err){
     if(granted){
       NSArray *accounts = [appDelegate.twitterAccountStore accountsWithAccountType:twitterAccountType];
+      // TODO: allow user to select account instead of defaulting to last one.
       appDelegate.twitterAccount = [accounts lastObject];
       [appDelegate loggedIn];
     } else {

@@ -25,18 +25,15 @@ typedef void (^ TwitterResponseBlock)(id,NSError *error);
 + (void) lookupUsersByIds:(NSArray *)ids handler:(TwitterResponseBlock)handler;
 + (void) lookupUsersByIds:(NSArray *)ids withUsers:(NSArray *)users handler:(TwitterResponseBlock)handler;
 
+#pragma mark - lists
+
++ (void) allListsForUser:(NSString *)userId withHandler:(TwitterResponseBlock)handler;
+
 #pragma mark - api endpoint methods
 
 + (void) callApiEndpoint:(NSString *)urlFragment andHandler:(TwitterResponseBlock)handler;
 + (void) callApiEndpoint:(NSString *)urlFragment withParameters:(NSDictionary *)parameters andHandler:(TwitterResponseBlock)handler;
 + (void) callApiEndpoint:(NSString *)urlFragment withMethod:(SLRequestMethod)method andHandler:(TwitterResponseBlock)handler;
 + (void) callApiEndpoint:(NSString *)urlFragment withParameters:(NSDictionary *)parameters method:(SLRequestMethod)method andHandler:(TwitterResponseBlock)handler;
-
-#pragma mark - core data
-
-+ (NSManagedObjectContext *) getFollowerManagedObjectContext;
-+ (BOOL) createFollower:(NSDictionary *)aFollower asVIP:(BOOL)isVIP asOriginal:(BOOL)isOriginal;
-+ (NSString *)defaultString:(NSString *)value;
-+ (NSNumber *)defaultNumber:(NSNumber *)value;
 
 @end

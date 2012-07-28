@@ -33,6 +33,9 @@
 
 - (void)loggedIn {
   [self._userState setState:@"userLoggedIn" toValue:@"YES"];
+  [self._userState setState:@"currentUserId" toValue:self.twitterAccount.identifier];
+  [self._userState setState:@"currentUsername" toValue:self.twitterAccount.username];
+  [self._userState setState:@"currentAccountDescription" toValue:self.twitterAccount.accountDescription];
   [self.mainWindowController refreshState];
 }
 

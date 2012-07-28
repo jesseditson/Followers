@@ -8,7 +8,6 @@
 
 #import "Twitter.h"
 #import "FollowersAppDelegate.h"
-#import "Follower.h"
 
 @implementation Twitter
 
@@ -87,6 +86,12 @@
   }];
 }
 
+#pragma mark - lists
+
++ (void) allListsForUser:(NSString *)userId withHandler:(TwitterResponseBlock)handler {
+  [self callApiEndpoint:[NSString stringWithFormat:@"lists/all?user_id=%@",userId] andHandler:handler];
+}
+
 #pragma mark - call the api
 
 + (void) callApiEndpoint:(NSString *)urlFragment andHandler:(TwitterResponseBlock)handler {
@@ -124,68 +129,6 @@
       handler(responseObject,nil);
     }
   }];
-}
-
-#pragma mark - core data manipulation
-
-+ (NSManagedObjectContext *) getFollowerManagedObjectContext {
-  FollowersAppDelegate *appDelegate = (id)[[NSApplication sharedApplication] delegate];
-  return [appDelegate managedObjectContext];
-}
-
-+ (BOOL) createFollower:(NSDictionary *)aFollower asVIP:(BOOL)isVIP asOriginal:(BOOL)isOriginal {
-  NSManagedObjectContext *managedObjectContext = [self getFollowerManagedObjectContext];
-  Follower *follower = (Follower *)[NSEntityDescription insertNewObjectForEntityForName:@"Follower" inManagedObjectContext:managedObjectContext];
-  NSString *twitterId = [NSString stringWithFormat:@"%@",[aFollower objectForKey:@"id"]];
-  follower.twitter_id = twitterId;
-  follower.screen_name = [self defaultString:[aFollower objectForKey:@"screen_name"]];
-  follower.is_following = [self defaultNumber:[aFollower objectForKey:@"following"]];
-  follower.is_friends = [self defaultNumber:[aFollower objectForKey:@"following_me"]];
-  follower.statuses_count = [self defaultNumber:[aFollower objectForKey:@"statuses_count"]];
-  follower.friends_count = [self defaultNumber:[aFollower objectForKey:@"friends_count"]];
-  follower.user_description = [self defaultString:[aFollower objectForKey:@"user_description"]];
-  follower.notifications = [self defaultNumber:[aFollower objectForKey:@"notifications"]];
-  follower.geo_enabled = [self defaultNumber:[aFollower objectForKey:@"geo_enabled"]];
-  follower.verified = [self defaultNumber:[aFollower objectForKey:@"verified"]];
-  follower.followers_count = [self defaultNumber:[aFollower objectForKey:@"followers_count"]];
-  follower.protected = [self defaultNumber:[aFollower objectForKey:@"protected"]];
-  follower.utc_offset = [self defaultNumber:[aFollower objectForKey:@"utc_offset"]];
-  follower.lang = [self defaultString:[aFollower objectForKey:@"lang"]];
-  follower.contributors_enabled = [self defaultNumber:[aFollower objectForKey:@"contributors_enabled"]];
-  follower.url = [self defaultString:[aFollower objectForKey:@"url"]];
-  follower.favourites_count = [self defaultNumber:[aFollower objectForKey:@"favourites_count"]];
-  follower.created_at = [self defaultString:[aFollower objectForKey:@"created_at"]];
-  follower.profile_image_url = [self defaultString:[aFollower objectForKey:@"profile_image_url"]];
-  follower.location = [self defaultString:[aFollower objectForKey:@"location"]];
-  follower.name = [self defaultString:[aFollower objectForKey:@"name"]];
-  follower.vip = [NSNumber numberWithBool:isVIP];
-  follower.original = [NSNumber numberWithBool:isOriginal];
-  NSError *jsonError;
-  follower.full_json = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:aFollower options:0 error:&jsonError] encoding:NSUTF8StringEncoding];
-  // TODO: handle jsonError?
-  NSError *error;
-  if(![managedObjectContext save:&error]){
-    //TODO: Item could not be saved. Bail out or crash or something.
-    NSLog(@"Failed to save Follower with error: %@",error);
-    return NO;
-  } else {
-    return YES;
-  }
-}
-
-+ (NSString *)defaultString:(NSString *)value {
-  if(value == (id)[NSNull null] || value.length == 0){
-    return @"";
-  } else {
-    return value;
-  }
-}
-+ (NSNumber *)defaultNumber:(NSNumber *)value {
-  if(value == (id)[NSNull null]){
-    return 0;
-  } else {
-    return value;
-  }
 }
 
 @end

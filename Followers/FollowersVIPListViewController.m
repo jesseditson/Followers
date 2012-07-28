@@ -30,9 +30,9 @@
 - (void)loadView {
   NSLog(@"Loading VIP List View");
 	self.view = [FollowersVIPListView followers_viewFromNib];
-  [Twitter followersForUser:@"98531887" handler:^(NSArray *users, NSError *error){
+  /*[Twitter followersForUser:@"98531887" handler:^(NSArray *users, NSError *error){
     NSLog(@"got followers %@ and error %@",users,error);
-  }];
+  }];*/
 }
 
 #pragma mark API
