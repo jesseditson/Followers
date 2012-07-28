@@ -1,0 +1,7 @@
+*.swp
+*~.nib
+
+build/
+
+.DS_Store
+xcuserdata

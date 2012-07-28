@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F35501A315C0E7FE0078A356 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35501A215C0E7FE0078A356 /* Cocoa.framework */; };
+		F35501AD15C0E7FE0078A356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F35501AB15C0E7FE0078A356 /* InfoPlist.strings */; };
+		F35501AF15C0E7FE0078A356 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501AE15C0E7FE0078A356 /* main.m */; };
+		F35501B315C0E7FE0078A356 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F35501B115C0E7FE0078A356 /* Credits.rtf */; };
+		F35501B615C0E7FE0078A356 /* FollowersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501B515C0E7FE0078A356 /* FollowersAppDelegate.m */; };
+		F35501B915C0E7FE0078A356 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35501B715C0E7FE0078A356 /* MainMenu.xib */; };
+		F35501BC15C0E7FE0078A356 /* Followers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35501BA15C0E7FE0078A356 /* Followers.xcdatamodeld */; };
+		F35501E015C0E9CF0078A356 /* FollowersMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501DE15C0E9CF0078A356 /* FollowersMainWindowController.m */; };
+		F35501E115C0E9CF0078A356 /* FollowersMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35501DF15C0E9CF0078A356 /* FollowersMainWindowController.xib */; };
+		F35501E515C0EA1D0078A356 /* FollowersLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501E315C0EA1D0078A356 /* FollowersLoginViewController.m */; };
+		F35501E915C0EA850078A356 /* FollowersLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501E815C0EA850078A356 /* FollowersLoginView.m */; };
+		F35501EC15C0EB160078A356 /* NSView+FollowersExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F35501EB15C0EB160078A356 /* NSView+FollowersExtensions.m */; };
+		F35501EE15C0EBBA0078A356 /* FollowersLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35501ED15C0EBBA0078A356 /* FollowersLoginView.xib */; };
+		F3C19B2D15C36F10005E8B62 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C19B2C15C36F10005E8B62 /* Accounts.framework */; };
+		F3C19B3315C37128005E8B62 /* FollowersVIPListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C19B3215C37128005E8B62 /* FollowersVIPListView.xib */; };
+		F3C19B3615C37149005E8B62 /* FollowersVIPListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B3515C37149005E8B62 /* FollowersVIPListView.m */; };
+		F3C19B3915C37165005E8B62 /* FollowersVIPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B3815C37165005E8B62 /* FollowersVIPListViewController.m */; };
+		F3C19B4B15C38177005E8B62 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C19B4A15C38177005E8B62 /* Social.framework */; };
+		F3C19B4E15C39720005E8B62 /* Twitter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B4D15C39720005E8B62 /* Twitter.m */; };
+		F3C19B6415C44EDB005E8B62 /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B6315C44EDB005E8B62 /* Follower.m */; };
+		F3C19B6A15C45F36005E8B62 /* FollowersUserState.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C19B6915C45F36005E8B62 /* FollowersUserState.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F355019E15C0E7FE0078A356 /* Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Followers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35501A215C0E7FE0078A356 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F35501A515C0E7FE0078A356 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F35501A615C0E7FE0078A356 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F35501A715C0E7FE0078A356 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F35501AA15C0E7FE0078A356 /* Followers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Followers-Info.plist"; sourceTree = "<group>"; };
+		F35501AC15C0E7FE0078A356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F35501AE15C0E7FE0078A356 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F35501B015C0E7FE0078A356 /* Followers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Followers-Prefix.pch"; sourceTree = "<group>"; };
+		F35501B215C0E7FE0078A356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F35501B415C0E7FE0078A356 /* FollowersAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FollowersAppDelegate.h; sourceTree = "<group>"; };
+		F35501B515C0E7FE0078A356 /* FollowersAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowersAppDelegate.m; sourceTree = "<group>"; };
+		F35501B815C0E7FE0078A356 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F35501BB15C0E7FE0078A356 /* Followers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Followers.xcdatamodel; sourceTree = "<group>"; };
+		F35501DD15C0E9CF0078A356 /* FollowersMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersMainWindowController.h; sourceTree = SOURCE_ROOT; };
+		F35501DE15C0E9CF0078A356 /* FollowersMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersMainWindowController.m; sourceTree = SOURCE_ROOT; };
+		F35501DF15C0E9CF0078A356 /* FollowersMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowersMainWindowController.xib; sourceTree = SOURCE_ROOT; };
+		F35501E215C0EA1C0078A356 /* FollowersLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersLoginViewController.h; sourceTree = "<group>"; };
+		F35501E315C0EA1D0078A356 /* FollowersLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersLoginViewController.m; sourceTree = "<group>"; };
+		F35501E715C0EA850078A356 /* FollowersLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersLoginView.h; sourceTree = "<group>"; };
+		F35501E815C0EA850078A356 /* FollowersLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersLoginView.m; sourceTree = "<group>"; };
+		F35501EA15C0EB160078A356 /* NSView+FollowersExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+FollowersExtensions.h"; sourceTree = "<group>"; };
+		F35501EB15C0EB160078A356 /* NSView+FollowersExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+FollowersExtensions.m"; sourceTree = "<group>"; };
+		F35501ED15C0EBBA0078A356 /* FollowersLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowersLoginView.xib; sourceTree = "<group>"; };
+		F3C19B2C15C36F10005E8B62 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F3C19B3215C37128005E8B62 /* FollowersVIPListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowersVIPListView.xib; sourceTree = "<group>"; };
+		F3C19B3415C37149005E8B62 /* FollowersVIPListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersVIPListView.h; sourceTree = "<group>"; };
+		F3C19B3515C37149005E8B62 /* FollowersVIPListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersVIPListView.m; sourceTree = "<group>"; };
+		F3C19B3715C37165005E8B62 /* FollowersVIPListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersVIPListViewController.h; sourceTree = "<group>"; };
+		F3C19B3815C37165005E8B62 /* FollowersVIPListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersVIPListViewController.m; sourceTree = "<group>"; };
+		F3C19B4A15C38177005E8B62 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F3C19B4C15C39720005E8B62 /* Twitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Twitter.h; sourceTree = "<group>"; };
+		F3C19B4D15C39720005E8B62 /* Twitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Twitter.m; sourceTree = "<group>"; };
+		F3C19B6215C44EDB005E8B62 /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
+		F3C19B6315C44EDB005E8B62 /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
+		F3C19B6815C45F36005E8B62 /* FollowersUserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersUserState.h; sourceTree = "<group>"; };
+		F3C19B6915C45F36005E8B62 /* FollowersUserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersUserState.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F355019B15C0E7FE0078A356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C19B4B15C38177005E8B62 /* Social.framework in Frameworks */,
+				F3C19B2D15C36F10005E8B62 /* Accounts.framework in Frameworks */,
+				F35501A315C0E7FE0078A356 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F355019315C0E7FE0078A356 = {
+			isa = PBXGroup;
+			children = (
+				F35501A815C0E7FE0078A356 /* Followers */,
+				F35501A115C0E7FE0078A356 /* Frameworks */,
+				F355019F15C0E7FE0078A356 /* Products */,
+				F3C19B6115C44CDB005E8B62 /* Data Models */,
+			);
+			sourceTree = "<group>";
+		};
+		F355019F15C0E7FE0078A356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F355019E15C0E7FE0078A356 /* Followers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F35501A115C0E7FE0078A356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3C19B4A15C38177005E8B62 /* Social.framework */,
+				F3C19B2C15C36F10005E8B62 /* Accounts.framework */,
+				F35501A215C0E7FE0078A356 /* Cocoa.framework */,
+				F35501A415C0E7FE0078A356 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F35501A415C0E7FE0078A356 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F35501A515C0E7FE0078A356 /* AppKit.framework */,
+				F35501A615C0E7FE0078A356 /* CoreData.framework */,
+				F35501A715C0E7FE0078A356 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F35501A815C0E7FE0078A356 /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				F35501DD15C0E9CF0078A356 /* FollowersMainWindowController.h */,
+				F35501DE15C0E9CF0078A356 /* FollowersMainWindowController.m */,
+				F3C19B4F15C39727005E8B62 /* Twitter */,
+				F3C19B2F15C370E2005E8B62 /* Views */,
+				F35501DF15C0E9CF0078A356 /* FollowersMainWindowController.xib */,
+				F35501B415C0E7FE0078A356 /* FollowersAppDelegate.h */,
+				F35501B515C0E7FE0078A356 /* FollowersAppDelegate.m */,
+				F35501B715C0E7FE0078A356 /* MainMenu.xib */,
+				F35501A915C0E7FE0078A356 /* Supporting Files */,
+				F3C19B6815C45F36005E8B62 /* FollowersUserState.h */,
+				F3C19B6915C45F36005E8B62 /* FollowersUserState.m */,
+			);
+			path = Followers;
+			sourceTree = "<group>";
+		};
+		F35501A915C0E7FE0078A356 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F35501AA15C0E7FE0078A356 /* Followers-Info.plist */,
+				F35501AB15C0E7FE0078A356 /* InfoPlist.strings */,
+				F35501AE15C0E7FE0078A356 /* main.m */,
+				F35501B015C0E7FE0078A356 /* Followers-Prefix.pch */,
+				F35501B115C0E7FE0078A356 /* Credits.rtf */,
+				F35501EA15C0EB160078A356 /* NSView+FollowersExtensions.h */,
+				F35501EB15C0EB160078A356 /* NSView+FollowersExtensions.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3C19B2F15C370E2005E8B62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3C19B3115C370F3005E8B62 /* VIPList */,
+				F3C19B3015C370ED005E8B62 /* Login */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F3C19B3015C370ED005E8B62 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F35501E715C0EA850078A356 /* FollowersLoginView.h */,
+				F35501E815C0EA850078A356 /* FollowersLoginView.m */,
+				F35501ED15C0EBBA0078A356 /* FollowersLoginView.xib */,
+				F35501E215C0EA1C0078A356 /* FollowersLoginViewController.h */,
+				F35501E315C0EA1D0078A356 /* FollowersLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		F3C19B3115C370F3005E8B62 /* VIPList */ = {
+			isa = PBXGroup;
+			children = (
+				F3C19B3215C37128005E8B62 /* FollowersVIPListView.xib */,
+				F3C19B3415C37149005E8B62 /* FollowersVIPListView.h */,
+				F3C19B3515C37149005E8B62 /* FollowersVIPListView.m */,
+				F3C19B3715C37165005E8B62 /* FollowersVIPListViewController.h */,
+				F3C19B3815C37165005E8B62 /* FollowersVIPListViewController.m */,
+			);
+			name = VIPList;
+			sourceTree = "<group>";
+		};
+		F3C19B4F15C39727005E8B62 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				F3C19B4C15C39720005E8B62 /* Twitter.h */,
+				F3C19B4D15C39720005E8B62 /* Twitter.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		F3C19B6115C44CDB005E8B62 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				F35501BA15C0E7FE0078A356 /* Followers.xcdatamodeld */,
+				F3C19B6215C44EDB005E8B62 /* Follower.h */,
+				F3C19B6315C44EDB005E8B62 /* Follower.m */,
+			);
+			name = "Data Models";
+			path = Followers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F355019D15C0E7FE0078A356 /* Followers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F35501BF15C0E7FE0078A356 /* Build configuration list for PBXNativeTarget "Followers" */;
+			buildPhases = (
+				F355019A15C0E7FE0078A356 /* Sources */,
+				F355019B15C0E7FE0078A356 /* Frameworks */,
+				F355019C15C0E7FE0078A356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Followers;
+			productName = Followers;
+			productReference = F355019E15C0E7FE0078A356 /* Followers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F355019515C0E7FE0078A356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Followers;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jesse Ditson";
+			};
+			buildConfigurationList = F355019815C0E7FE0078A356 /* Build configuration list for PBXProject "Followers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F355019315C0E7FE0078A356;
+			productRefGroup = F355019F15C0E7FE0078A356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F355019D15C0E7FE0078A356 /* Followers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F355019C15C0E7FE0078A356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35501AD15C0E7FE0078A356 /* InfoPlist.strings in Resources */,
+				F35501B315C0E7FE0078A356 /* Credits.rtf in Resources */,
+				F35501B915C0E7FE0078A356 /* MainMenu.xib in Resources */,
+				F35501E115C0E9CF0078A356 /* FollowersMainWindowController.xib in Resources */,
+				F35501EE15C0EBBA0078A356 /* FollowersLoginView.xib in Resources */,
+				F3C19B3315C37128005E8B62 /* FollowersVIPListView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F355019A15C0E7FE0078A356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F35501AF15C0E7FE0078A356 /* main.m in Sources */,
+				F35501B615C0E7FE0078A356 /* FollowersAppDelegate.m in Sources */,
+				F35501BC15C0E7FE0078A356 /* Followers.xcdatamodeld in Sources */,
+				F35501E015C0E9CF0078A356 /* FollowersMainWindowController.m in Sources */,
+				F35501E515C0EA1D0078A356 /* FollowersLoginViewController.m in Sources */,
+				F35501E915C0EA850078A356 /* FollowersLoginView.m in Sources */,
+				F35501EC15C0EB160078A356 /* NSView+FollowersExtensions.m in Sources */,
+				F3C19B3615C37149005E8B62 /* FollowersVIPListView.m in Sources */,
+				F3C19B3915C37165005E8B62 /* FollowersVIPListViewController.m in Sources */,
+				F3C19B4E15C39720005E8B62 /* Twitter.m in Sources */,
+				F3C19B6415C44EDB005E8B62 /* Follower.m in Sources */,
+				F3C19B6A15C45F36005E8B62 /* FollowersUserState.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F35501AB15C0E7FE0078A356 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35501AC15C0E7FE0078A356 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F35501B115C0E7FE0078A356 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35501B215C0E7FE0078A356 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F35501B715C0E7FE0078A356 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F35501B815C0E7FE0078A356 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F35501BD15C0E7FE0078A356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F35501BE15C0E7FE0078A356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F35501C015C0E7FE0078A356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Followers/Followers-Prefix.pch";
+				INFOPLIST_FILE = "Followers/Followers-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F35501C115C0E7FE0078A356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Followers/Followers-Prefix.pch";
+				INFOPLIST_FILE = "Followers/Followers-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F355019815C0E7FE0078A356 /* Build configuration list for PBXProject "Followers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35501BD15C0E7FE0078A356 /* Debug */,
+				F35501BE15C0E7FE0078A356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F35501BF15C0E7FE0078A356 /* Build configuration list for PBXNativeTarget "Followers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35501C015C0E7FE0078A356 /* Debug */,
+				F35501C115C0E7FE0078A356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F35501BA15C0E7FE0078A356 /* Followers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F35501BB15C0E7FE0078A356 /* Followers.xcdatamodel */,
+			);
+			currentVersion = F35501BB15C0E7FE0078A356 /* Followers.xcdatamodel */;
+			path = Followers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F355019515C0E7FE0078A356 /* Project object */;
+}
