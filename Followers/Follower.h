@@ -12,6 +12,7 @@
 
 @interface Follower : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * owner_account;
 @property (nonatomic, retain) NSNumber * contributors_enabled;
 @property (nonatomic, retain) NSString * created_at;
 @property (nonatomic, retain) NSNumber * favourites_count;

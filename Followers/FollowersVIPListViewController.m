@@ -9,6 +9,7 @@
 #import "FollowersVIPListViewController.h"
 #import "FollowersVIPListView.h"
 #import "NSView+FollowersExtensions.h"
+#import "FollowersUserState.h"
 #import "Twitter.h"
 
 @interface FollowersVIPListViewController ()
@@ -30,9 +31,18 @@
 - (void)loadView {
   NSLog(@"Loading VIP List View");
 	self.view = [FollowersVIPListView followers_viewFromNib];
-  /*[Twitter followersForUser:@"98531887" handler:^(NSArray *users, NSError *error){
-    NSLog(@"got followers %@ and error %@",users,error);
-  }];*/
+  NSString *userId = [FollowersUserState valueForKey:@"currentUsername"];
+  [Twitter allListsForUser:userId withHandler:^(NSArray *lists, NSError *error){
+    NSLog(@"got lists %@ and error %@",lists,error);
+    [Twitter followersForUser:userId handler:^(NSArray *followers, NSError *error){
+      __block NSMutableArray *users = [[NSMutableArray alloc] initWithArray:followers];
+      [Twitter friendsForUser:userId handler:^(NSArray *friends,NSError *error){
+        NSLog(@"got followers %@ and error %@",users,error);
+        [users addObjectsFromArray:friends];
+        [self.view populateWithUsers:users andLists:lists];
+      }];
+    }];
+  }];
 }
 
 #pragma mark API

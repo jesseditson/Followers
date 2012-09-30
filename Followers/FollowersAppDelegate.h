@@ -25,6 +25,7 @@
 - (IBAction)saveAction:(id)sender;
 
 - (void)loggedIn;
+- (void)setVIPList:(NSString *)vipListSlug;
 
 - (NSString *)getUserState;
 

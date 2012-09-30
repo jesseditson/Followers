@@ -29,7 +29,6 @@
 
 - (void)windowDidLoad {
   [super windowDidLoad];
-  [self refreshState];
 }
 
 - (void) refreshState {

@@ -15,10 +15,12 @@ typedef void (^ TwitterResponseBlock)(id,NSError *error);
 
 #pragma mark - friends & followers
 
-+ (void) followersForUser:(NSString *)userId handler:(TwitterResponseBlock)handler;
-
-+ (void) followerIdsForUser:(NSString *)userId handler:(TwitterResponseBlock)handler;
-+ (void) followerIdsForUser:(NSString *)userId withIds:(NSArray *)ids andCursor:(NSNumber *)cursor handler:(TwitterResponseBlock)handler;
++ (void) followersForUser:(NSString *)screenname handler:(TwitterResponseBlock)handler;
++ (void) followerIdsForUser:(NSString *)screenname handler:(TwitterResponseBlock)handler;
++ (void) followerIdsForUser:(NSString *)screenname withIds:(NSArray *)ids andCursor:(NSNumber *)cursor handler:(TwitterResponseBlock)handler;
++ (void) friendsForUser:(NSString *)screenname handler:(TwitterResponseBlock)handler;
++ (void) friendIdsForUser:(NSString *)screenname handler:(TwitterResponseBlock)handler;
++ (void) friendIdsForUser:(NSString *)screenname withIds:(NSArray *)ids andCursor:(NSNumber *)cursor handler:(TwitterResponseBlock)handler;
 
 #pragma mark - users
 
@@ -27,7 +29,15 @@ typedef void (^ TwitterResponseBlock)(id,NSError *error);
 
 #pragma mark - lists
 
-+ (void) allListsForUser:(NSString *)userId withHandler:(TwitterResponseBlock)handler;
++ (void) allListsForUser:(NSString *)screenname withHandler:(TwitterResponseBlock)handler;
++ (void) saveListForUser:(NSString *)username withName:(NSString *)listName withIds:(NSArray *)listIds andHandler:(TwitterResponseBlock)handler;
++ (void) updateListForUser:(NSString *)username withName:(NSString *)listName withIds:(NSArray *)listIds andHandler:(TwitterResponseBlock)handler;
++ (void) createListForUser:(NSString *)username withName:(NSString *)listName withIds:(NSArray *)listIds andHandler:(TwitterResponseBlock)handler;
++ (void) getListForUser:(NSString *)username withName:(NSString *)listName andHandler:(TwitterResponseBlock)handler;
+
+#pragma mark - account
+
++ (void) currentAccount:(TwitterResponseBlock)handler;
 
 #pragma mark - api endpoint methods
 

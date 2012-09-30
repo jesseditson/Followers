@@ -8,11 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FollowersUserState : NSObject
+@interface FollowersUserState : NSObject {
+  NSString *currentState;
+}
+
+typedef void (^ UserStateResponseBlock)(id,NSError *error);
 
 @property (nonatomic, retain) NSUserDefaults *config;
 @property (nonatomic, retain) NSString *currentState;
 
+- (id) initWithReadyCallback:(UserStateResponseBlock)handler;
+
 - (void) setState:(NSString *)state toValue:(NSString *)value;
+- (NSDictionary *) currentUser;
+
++ (NSString *) valueForKey:(NSString *)key;
 
 @end

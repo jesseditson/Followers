@@ -11,6 +11,7 @@
 
 @implementation Follower
 
+@dynamic owner_account;
 @dynamic contributors_enabled;
 @dynamic created_at;
 @dynamic favourites_count;

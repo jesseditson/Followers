@@ -26,21 +26,34 @@
   // Insert code here to initialize your application
   NSLog(@"finished launching");
   self.twitterAccountStore = [[ACAccountStore alloc] init];
-  self._userState = [[FollowersUserState alloc] init];
-  self.mainWindowController = [[FollowersMainWindowController alloc] init];
-	[self.mainWindowController.window makeKeyAndOrderFront:nil];
+  // TODO: show loading screen
+  self._userState = [[FollowersUserState alloc] initWithReadyCallback:^(NSString *currentState,NSError *error){
+    self.mainWindowController = [[FollowersMainWindowController alloc] init];
+    NSLog(@"initialized at state %@, user state %@",currentState,[self._userState currentState]);
+    [self.mainWindowController refreshState];
+    [self.mainWindowController.window makeKeyAndOrderFront:nil];
+  }];
 }
 
 - (void)loggedIn {
-  [self._userState setState:@"userLoggedIn" toValue:@"YES"];
   [self._userState setState:@"currentUserId" toValue:self.twitterAccount.identifier];
   [self._userState setState:@"currentUsername" toValue:self.twitterAccount.username];
   [self._userState setState:@"currentAccountDescription" toValue:self.twitterAccount.accountDescription];
   [self.mainWindowController refreshState];
 }
 
+- (void)setVIPList:(NSString *)vipListSlug {
+  NSString *key = [NSString stringWithFormat:@"%@_vipList",[[self._userState currentUser] objectForKey:@"screen_name"]];
+  NSLog(@"Setting vip list key: %@",key);
+  [self._userState setState:key toValue:vipListSlug];
+  [self._userState setState:@"currentState" toValue:@"normal"];
+  [self.mainWindowController refreshState];
+}
+
 - (NSString *)getUserState {
-  return [self._userState currentState];
+  NSString *currentState = [self._userState currentState];
+  NSLog(@"user in state %@",currentState);
+  return currentState;
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.followersapp.Followers" in the user's Application Support directory.
